@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using EventDictionnary = System.Collections.Concurrent.ConcurrentDictionary<System.Enum, System.Collections.Generic.IList<Radix.Event.EventListener>>;
+
 // Define Complex Type
+using EventDictionnary = System.Collections.Concurrent.ConcurrentDictionary<System.Enum, System.Collections.Generic.IList<Radix.Event.EventListener>>;
 using EventPair = System.Collections.Generic.KeyValuePair<System.Enum, System.Collections.Generic.IList<Radix.Event.EventListener>>;
 
 namespace Radix.Event
