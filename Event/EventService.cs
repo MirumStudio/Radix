@@ -34,7 +34,7 @@ namespace Radix.Event
             }
         }
 
-        static internal void UnregisterAllEventListener(Type _listenerParent)
+        static public void UnregisterAllEventListener(Type _listenerParent)
         {
             instance.mInternalEventDispatcher.UnregisterAllEventsListeners(_listenerParent);
             instance.mExternalEventDispatcher.UnregisterAllEventsListeners(_listenerParent);

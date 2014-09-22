@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassEventA.cs" />
+    <Compile Include="ClassEventB.cs" />
     <Compile Include="ConsoleMenu.cs" />
     <Compile Include="ConsoleUI.cs" />
     <Compile Include="ConsoleWindow.cs" />

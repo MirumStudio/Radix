@@ -14,6 +14,7 @@ namespace RadixConsole
         static void Main(string[] args)
         {
             CustomConsole.Init();
+            ServiceManager.Instance.Init();
 
             var mainMenu = new MainMenu();
             mainMenu.Display();

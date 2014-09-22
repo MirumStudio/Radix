@@ -33,7 +33,7 @@ namespace Radix.Service
 
         private List<ServiceBase> m_serviceList;
 
-        internal void Init()
+        public void Init()
         {
             m_serviceList = new List<ServiceBase>();
 
