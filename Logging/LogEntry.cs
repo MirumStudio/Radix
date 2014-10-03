@@ -34,8 +34,9 @@ namespace Radix.Logging
         [DataMember]
         public string StackTrace { get; set; }
 
-        private LogEntry(){}
-        static public LogEntry Create(ELogType aType, string aMessage,
+        public LogEntry(){}
+
+        static public LogEntry Create(ELogType aType, string aMessage, bool aSave = true,
         [CallerMemberName] string aMemberName = "",
         [CallerFilePath] string aSourceFilePath = "",
         [CallerLineNumber] int aSourceLineNumber = 0)
@@ -61,7 +62,18 @@ namespace Radix.Logging
                 logEntry.StackTrace += "\n" + stackFrames[i].GetMethod().Name;
             }
 #endif
+
+            if(aSave)
+            {
+                logEntry.Save();
+            }
+
             return logEntry;
+        }
+
+        public void Save()
+        {
+
         }
     }
 }
