@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Runtime.Serialization;
+using Radix.Service;
 
 
 namespace Radix.Logging
@@ -34,7 +35,7 @@ namespace Radix.Logging
         [DataMember]
         public string StackTrace { get; set; }
 
-        public LogEntry(){}
+        private LogEntry(){}
 
         static public LogEntry Create(ELogType aType, string aMessage, bool aSave = true,
         [CallerMemberName] string aMemberName = "",
@@ -73,7 +74,7 @@ namespace Radix.Logging
 
         public void Save()
         {
-
+            ServiceManager.Instance.GetService<LogService>().AddLogEntry(this);
         }
     }
 }

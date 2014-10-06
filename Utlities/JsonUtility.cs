@@ -43,5 +43,10 @@ namespace Radix.Utilities
                 File.Delete(aPath);
             }
         }
+
+        /*public static string ConvertObjectToJson<T>(T aObject)
+        {
+
+        }*/
     }
 }
