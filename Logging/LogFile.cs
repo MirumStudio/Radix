@@ -46,7 +46,8 @@ namespace Radix.Logging
         private string GetLogName()
         {
             DateTime time = GetFirstLogTime();
-            return String.Format(LOG_NAME, time.Hour, time.Minute, time.ToShortDateString());
+            string date = time.ToString("MM-dd-yy");
+            return String.Format(LOG_NAME, time.Hour, time.Minute, date);
         }
     }
 }

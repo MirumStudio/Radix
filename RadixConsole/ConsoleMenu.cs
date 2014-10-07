@@ -49,14 +49,19 @@ namespace RadixConsole
 
         private void HandleMenuChoice(string aChoice)
         {
+            int choiceIndex = -1;
             try
             {
-                int choiceIndex = ConvertChoice(aChoice);
-                CallChosenMenuOptionCallback(choiceIndex);
+                choiceIndex = ConvertChoice(aChoice);   
             }
             catch (Exception)
             {
                 DisplayErrorMessage();
+            }
+
+            if (choiceIndex >= 0)
+            {
+                CallChosenMenuOptionCallback(choiceIndex);
             }
         }
 
