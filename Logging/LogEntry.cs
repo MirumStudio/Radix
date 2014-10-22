@@ -57,7 +57,7 @@ namespace Radix.Logging
             var trace = new StackTrace();
             StackFrame[] stackFrames = trace.GetFrames();
 
-            //Iteration is begin at index 1 because the inde 0 is this method "Create"
+            //Iteration is beginning at index 1 because the index 0 is this method "Create"
             for(int i = 1; i < stackFrames.Count(); i++)
             {
                 logEntry.StackTrace += "\n" + stackFrames[i].GetMethod().Name;
