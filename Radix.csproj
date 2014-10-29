@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseManagement\SQLiteConnection.cs" />
     <Compile Include="DatabaseManagement\DatabaseParameter.cs" />
     <Compile Include="DatabaseManagement\EDatabaseType.cs" />
     <Compile Include="DatabaseManagement\EDataType.cs" />
