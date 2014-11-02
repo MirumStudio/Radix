@@ -4,10 +4,20 @@ namespace Radix.Event
 {
     public class EventListener
     {
+        public static void Register<T>(Enum _event, EventReceiverHandler<T> _callback)
+        {
+            //ErrorManager.AssertNull(_callback);
+            RegisterInternal(_event, _callback);
+        }
+
         public static void Register(Enum _event, EventReceiverHandler _callback)
         {
             //ErrorManager.AssertNull(_callback);
+            RegisterInternal(_event, _callback);
+        }
 
+        private static void RegisterInternal(Enum _event, Delegate _callback)
+        {
             EventListener eventListener = new EventListener();
 
             eventListener.Event = _event;
@@ -36,7 +46,7 @@ namespace Radix.Event
             private set;
         }
 
-        public EventReceiverHandler Callback
+        public Delegate Callback
         {
             get;
             private set;

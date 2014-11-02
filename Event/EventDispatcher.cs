@@ -71,7 +71,7 @@ namespace Radix.Event
                     if (_listernerType == null || _listernerType == listener.Listener)
                     {
                         //ErrorManager.AssertNull(listener.Callback);
-                        listener.Callback(_event, _args);
+                        listener.Callback.DynamicInvoke(_event, _args);
                     }
                 });
             }

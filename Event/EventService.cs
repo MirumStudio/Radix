@@ -5,6 +5,7 @@ using System;
 namespace Radix.Event
 {
     public delegate void EventReceiverHandler(Enum _event, object _args);
+    public delegate void EventReceiverHandler<T>(Enum _event, T _args);
     public class EventService : ServiceBase
     {
         private static EventService instance = null;
