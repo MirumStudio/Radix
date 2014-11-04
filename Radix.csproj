@@ -55,16 +55,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseManagement\SQLiteConnection.cs" />
+    <Compile Include="DatabaseManagement\DatabaseService.cs" />
+    <Compile Include="DatabaseManagement\Query.cs" />
+    <Compile Include="DatabaseManagement\SQLite\SQLiteConnection.cs" />
     <Compile Include="DatabaseManagement\DatabaseParameter.cs" />
     <Compile Include="DatabaseManagement\EDatabaseType.cs" />
     <Compile Include="DatabaseManagement\EDataType.cs" />
-    <Compile Include="DatabaseManagement\SQLiteDelete.cs" />
-    <Compile Include="DatabaseManagement\SQLiteInsert.cs" />
-    <Compile Include="DatabaseManagement\SQLiteManager.cs" />
-    <Compile Include="DatabaseManagement\SQLiteSelect.cs" />
-    <Compile Include="DatabaseManagement\SQLiteUpdate.cs" />
+    <Compile Include="DatabaseManagement\SQLite\SQLiteDelete.cs" />
+    <Compile Include="DatabaseManagement\SQLite\SQLiteInsert.cs" />
+    <Compile Include="DatabaseManagement\SQLite\SQLiteManager.cs" />
+    <Compile Include="DatabaseManagement\SQLite\SQLiteSelect.cs" />
+    <Compile Include="DatabaseManagement\SQLite\SQLiteUpdate.cs" />
     <Compile Include="DataChannel\DataChannel.cs" />
+    <Compile Include="DataChannel\DataChannelService.cs" />
     <Compile Include="DataChannel\EDataEvent.cs" />
     <Compile Include="Event\EInternalEvent.cs" />
     <Compile Include="Event\EventDispatcher.cs" />

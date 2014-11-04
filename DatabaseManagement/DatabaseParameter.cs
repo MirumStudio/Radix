@@ -15,7 +15,7 @@ namespace Radix.DatabaseManagement
         #region Constructors
         public DatabaseParameter()
         {
-            this._value = "";
+            this._value = string.Empty;
             this._databaseType = EDatabaseType.SQLite;
             this._valueType = EDataType.SQLITE_TEXT;
         }

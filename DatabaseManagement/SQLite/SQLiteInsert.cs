@@ -15,7 +15,7 @@ namespace Radix.DatabaseManagement
         #region Constructors
         public SQLiteInsert()
         {
-            this._table = "";
+            this._table = string.Empty;
             this._values = new DatabaseParameter[0];
         }
 
